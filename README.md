@@ -46,20 +46,6 @@ It’s designed for beginners who want to understand the fundamental principles 
 - [AWS Documentation](https://docs.aws.amazon.com/)
 - [AWS Cloud Practitioner Exam Guide (PDF)](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf)
 
----
-
-## Study Progress
-
-| Module | Status | Notes |
-|--------|--------|-------|
-| Introduction to Cloud | In Progress | Understanding cloud concepts |
-| Cloud Economics | Pending | Exploring pricing and TCO |
-| Security and Compliance | Pending | Learning IAM and shared responsibility |
-| Architecture | Pending | Reviewing global infrastructure and core services |
-| Pricing and Support | Pending | Understanding billing and support tiers |
-
----
-
 ## Status
   *Work in progress – updating this repository as I complete each module of the course.*
 ---
