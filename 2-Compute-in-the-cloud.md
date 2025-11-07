@@ -1,4 +1,4 @@
-# Module 2: Compute in the Cloud ⚙️
+# Module 2: Compute in the Cloud 
 
 ## Overview
 This module introduces **compute resources** in AWS — the engines that process workloads and run applications.  
