@@ -1,4 +1,4 @@
-# Module 3: Exploring Compute Services 🧩
+# Module 3: Exploring Compute Services 
 
 ---
 
