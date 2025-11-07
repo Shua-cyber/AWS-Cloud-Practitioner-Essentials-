@@ -1,138 +1,117 @@
-Module 3: Exploring Compute Services 
-Overview
+# Module 3: Exploring Compute Services 🧩
 
-This module dives deeper into AWS compute options and explores how to choose the right service based on control, flexibility, and operational needs.
-You’ll learn how to compare Amazon EC2, AWS Lambda, and container-based services like Amazon ECS, Amazon EKS, and AWS Fargate.
+---
 
-Key Concepts
-What Are Compute Services?
+## Overview
+This module focuses on **modern compute services in AWS**, including containers, orchestration tools, and managed platforms. You’ll learn how services like **ECS**, **EKS**, **Fargate**, and **Elastic Beanstalk** simplify application deployment, scaling, and management.  
 
-Compute services provide the infrastructure and resources to run applications in the cloud.
-Each service varies in how much you manage versus how much AWS manages for you.
+It also covers **Amazon Lightsail**, **AWS Batch**, and **AWS Outposts**, which extend compute flexibility to specific use cases and environments.
 
-Level of Control	Example Service	Description
-Full Control	Amazon EC2	You manage instances, scaling, OS updates, and security.
-Partial Control	ECS / EKS	You manage containers; AWS manages orchestration or infrastructure.
-Minimal Control	AWS Lambda / Fargate	AWS manages scaling, patching, and server maintenance.
-Amazon EC2 (Elastic Compute Cloud)
-Overview
+---
 
-Amazon EC2 provides virtual machines (instances) that give you full control over your compute environment.
-You can choose instance types, storage, and networking configurations to match your workload needs.
+## Key Concepts
 
-Key Features
+### What Are Containers?
+Containers are **lightweight, portable packages** that include everything needed to run an application—code, runtime, and dependencies.  
+AWS offers multiple services to **store, orchestrate, and run containers** efficiently.
 
-Choose from hundreds of instance types for different use cases.
+| Term | Description |
+|------|--------------|
+| **Container** | A standardized unit of software that runs reliably across environments. |
+| **Image** | A snapshot of a container’s file system used to launch instances of containers. |
+| **Orchestration** | The process of automating deployment, scaling, and management of containerized applications. |
 
-Use Elastic Load Balancing (ELB) and Auto Scaling for performance and cost efficiency.
+---
 
-Secure access with key pairs and security groups.
+## Core Container Services
 
-Pay-as-you-go or use Reserved / Spot Instances for savings.
+| Service | Description | Key Benefit |
+|----------|--------------|--------------|
+| **Amazon Elastic Container Registry (ECR)** | Fully managed container image registry for storing, managing, and deploying container images securely. | Simplifies image management with integrated security and scalability. |
+| **Amazon Elastic Container Service (ECS)** | Fully managed container orchestration service that runs Docker containers on AWS. | Simplifies running and scaling containerized applications. |
+| **Amazon Elastic Kubernetes Service (EKS)** | Fully managed Kubernetes service for running Kubernetes clusters on AWS and on premises. | Provides Kubernetes automation with deep AWS integration. |
+| **AWS Fargate** | Serverless compute engine for running containers without managing servers or clusters. | Eliminates server management—pay only for container resources used. |
 
-Common Use Cases
+---
 
-Web servers and enterprise applications
+## AWS Elastic Beanstalk
+**AWS Elastic Beanstalk** is a **Platform as a Service (PaaS)** that makes it easy to deploy, manage, and scale web applications.  
 
-Development and test environments
+AWS handles the underlying infrastructure (servers, OS, scaling, load balancing), letting developers focus on code.
 
-Big data processing
+**Good for:** Developers who want to deploy applications quickly without managing servers.
 
-Legacy workloads requiring full OS control
+**Common Use Cases:**
+- Hosting web apps built in Python, Node.js, Java, or .NET  
+- Automatically scaling and load balancing web environments  
+- Rapid prototyping or staging environments  
 
-AWS Lambda
-Overview
+---
 
-AWS Lambda is a serverless compute service that runs your code automatically in response to events.
-You don’t provision or manage servers — AWS handles scaling and fault tolerance.
+## AWS Batch
+**AWS Batch** efficiently runs **large-scale batch computing jobs** across AWS compute services.  
 
-How It Works
+It automatically provisions compute resources and optimizes workload scheduling based on job requirements.
 
-Upload your code and define a trigger (like S3, DynamoDB, or API Gateway).
+**Good for:** High-performance workloads that need to process large volumes of data, such as analytics, simulations, or scientific computing.
 
-Lambda executes your function only when triggered.
+**Example Use Cases:**
+- Image or video processing  
+- Financial risk modeling  
+- Genomics data analysis  
 
-You pay only for the compute time used.
+---
 
-Common Use Cases
+## Amazon Lightsail
+**Amazon Lightsail** provides a **simplified cloud platform** for users who want to quickly deploy virtual private servers (VPS), containers, and databases.  
 
-Process files automatically when uploaded to S3.
+It offers predictable, low-cost pricing and preconfigured environments for small-scale applications.
 
-Run backend logic for APIs with API Gateway.
+| Feature | Description |
+|----------|--------------|
+| **VPS hosting** | Easily launch and manage virtual servers. |
+| **Container support** | Run lightweight container workloads without deep AWS knowledge. |
+| **Predictable pricing** | Fixed monthly cost for compute, storage, and data transfer. |
 
-Automate routine system tasks.
+**Good for:** Small businesses, students, or developers needing an easy entry point into AWS.
 
-Execute scheduled jobs via Amazon EventBridge.
+---
 
-Container-Based Compute
+## AWS Outposts
+**AWS Outposts** extends AWS infrastructure and services to **on-premises** locations.  
 
-Containers package code and dependencies together, making apps portable and consistent across environments.
-AWS offers multiple services to deploy and manage containers at scale.
+It provides a **hybrid cloud** model, enabling local compute and data storage with consistent AWS tools and APIs.
 
-Amazon ECS (Elastic Container Service)
+**Good for:** Workloads requiring **low latency**, **local data processing**, or **data residency compliance**.
 
-A fully managed container orchestration service that integrates tightly with other AWS services.
+**Example Use Cases:**
+- Real-time factory or hospital systems  
+- Local analytics with data residency constraints  
+- On-premises applications needing cloud integration  
 
-Best For:
+---
 
-Running Docker containers
+## Choosing a Modern Application Strategy
+AWS provides guidance through the **Decision Guide for Modern Application Strategy**, which helps organizations decide between **serverless** and **Kubernetes-based** approaches.
 
-AWS-native container management
+| Approach | Description | Best For |
+|-----------|--------------|----------|
+| **Serverless** | Automatically manages scaling, patching, and infrastructure (e.g., AWS Lambda, Fargate). | Teams focusing on agility, cost optimization, and minimal operations. |
+| **Kubernetes (EKS)** | Provides full control of orchestration and configuration using Kubernetes tools. | Teams needing portability, customization, or hybrid/multi-cloud strategies. |
 
-Simplifying microservice deployments
+---
 
-Amazon EKS (Elastic Kubernetes Service)
+## Summary
+AWS offers multiple compute services to match every application strategy:
 
-A managed Kubernetes service that runs Kubernetes control planes and nodes for you.
+- **Containers:** Managed through ECR, ECS, and EKS for flexible, scalable workloads.  
+- **Serverless Compute:** Fargate and Lambda reduce management overhead.  
+- **Application Management:** Elastic Beanstalk automates deployment and scaling.  
+- **Specialized Compute:** Lightsail simplifies VPS hosting, AWS Batch handles large-scale processing, and Outposts extends AWS to on-prem environments.  
+- **Modern App Strategy:** Choose serverless for simplicity or Kubernetes for control.
 
-Best For:
+---
 
-Teams already using Kubernetes
+## Next Module ➡️
+**Module 4: Storage Services** – Learn how AWS provides durable, scalable, and cost-effective storage solutions with services like S3, EBS, and Glacier.
 
-Multi-cloud or hybrid architectures
-
-Complex workloads needing Kubernetes ecosystem tools
-
-AWS Fargate
-
-A serverless compute engine for containers that works with ECS and EKS.
-
-Best For:
-
-Running containers without managing EC2 instances
-
-Simplifying container scaling and infrastructure management
-
-Choosing the Right Compute Option
-Service	Management Model	Scalability	Ideal For
-EC2	Full control	Manual or Auto Scaling	Legacy apps, full OS access
-Lambda	Fully managed (serverless)	Automatic	Event-driven or microservices
-ECS / EKS	Shared (you + AWS)	Auto or manual	Containerized workloads
-Fargate	Fully managed	Automatic	Serverless containers
-Elastic Beanstalk (Review)
-
-Although covered earlier, AWS Elastic Beanstalk bridges the gap between full control (EC2) and serverless simplicity.
-It automatically handles capacity provisioning, load balancing, and deployment — great for developers who just want to upload code.
-
-Key Terms
-
-Compute Instance: Virtual server that runs applications in the cloud.
-
-AMI (Amazon Machine Image): Template for launching EC2 instances.
-
-Container: Lightweight, portable application environment.
-
-Orchestration: Automated management of containerized applications.
-
-Serverless: No server management — AWS handles infrastructure behind the scenes.
-
-Summary
-
-In this module, you explored how AWS compute services range from manual management (EC2) to fully managed (Lambda, Fargate).
-You also learned about container-based compute options (ECS, EKS) that combine scalability with control.
-
-By understanding each model, you can choose the right compute service for your specific workload, balancing cost, flexibility, and automation.
-
-Next Module ➡️
-
-Module 4: Going Global – Learn about AWS’s global infrastructure, including Regions, Availability Zones, and Edge Locations, and how they help deliver resilient, low-latency applications worldwide.
