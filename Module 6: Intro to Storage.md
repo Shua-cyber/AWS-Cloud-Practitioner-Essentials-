@@ -1,215 +1,169 @@
-Overview
+# Module 6 – Intro to Storage
 
-This module introduces the core AWS storage services, the differences between storage types, and how AWS storage fits into the shared responsibility model. You will also explore Amazon S3, EBS, EFS, FSx, Storage Gateway, and Elastic Disaster Recovery (DR), along with hands-on tasks in the AWS Management Console.
+## Overview
+In this module, you explore AWS storage types, core AWS storage services, lifecycle features, security responsibilities, and real-world cloud storage architectures.
 
-Storage Types
-Block Storage
+---
 
-Data stored in fixed-size blocks.
+## Storage Types
 
-Low-latency and high-performance.
+| Storage Type | Description | AWS Services | Common Use Cases |
+|--------------|-------------|--------------|------------------|
+| Block Storage | Data stored in fixed-size blocks; low-latency access | Amazon EBS, EC2 Instance Store | Databases, OS boot volumes, transactional apps |
+| Object Storage | Data stored as objects with metadata; massively scalable | Amazon S3 | Backups, static websites, data lakes, analytics |
+| File Storage | Shared file system with hierarchical structure | Amazon EFS, Amazon FSx | Distributed apps, enterprise workloads, HPC |
 
-AWS Service: Amazon EBS
+---
 
-Use Cases: Databases, boot volumes, transactional workloads.
+## Shared Responsibility Model (Storage)
 
-Object Storage
+| AWS Responsibility | Customer Responsibility |
+|--------------------|-------------------------|
+| Ensuring durability & availability of storage infrastructure | Data protection & access control (IAM, policies) |
+| Securing hardware & global network | Encryption keys, bucket/object permissions |
+| Maintaining AWS-managed services | Lifecycle policies, backup strategy, compliance |
 
-Data stored as objects with metadata.
+---
 
-Massively scalable, durable, accessible over HTTP.
+## Block Storage Services
 
-AWS Service: Amazon S3
+### EC2 Instance Store
 
-Use Cases: Backups, static websites, media storage, big data.
+| Feature | Summary |
+|--------|---------|
+| What it is | Temporary block storage physically attached to host |
+| Benefits | Extremely high I/O performance |
+| Limitations | Data lost on stop/terminate |
+| Best For | Caches, buffers, ephemeral workloads |
 
-File Storage
+---
 
-Data stored in hierarchical directories.
+### Amazon EBS
 
-Accessible over network file protocols.
+| Feature | Summary |
+|--------|---------|
+| What it is | Persistent block storage for EC2 |
+| Benefits | High durability, encryption, resizing, snapshots |
+| Best For | Databases, OS disks, production workloads |
 
-AWS Services: Amazon EFS, Amazon FSx
+#### EBS Snapshots
 
-Use Cases: Shared storage, home directories, enterprise app migrations.
+| Topic | Details |
+|-------|---------|
+| Purpose | Incremental backups stored in S3 |
+| Benefits | Fast restore, cross-region copy, DR |
+| Tools | Automated via Data Lifecycle Manager (DLM) |
 
-AWS Shared Responsibility Model & Storage
+#### EBS Lifecycle
 
-AWS: Infrastructure security, durability guarantees, hardware.
+| Phase | Description |
+|-------|-------------|
+| Volume | Live data attached to EC2 |
+| Snapshot | Backup stored in S3 |
+| Policies | Automate retention & cleanup |
 
-Customer: Data protection, encryption, access controls, backup policies, lifecycle configurations.
+---
 
-Amazon EC2 Instance Store
+## Object Storage Services
 
-Description: Temporary, high-performance block storage physically attached to the host.
+### Amazon S3
 
-Benefits: Extremely fast I/O.
+| Feature | Summary |
+|--------|---------|
+| What it is | Highly durable, scalable object storage |
+| Security | IAM, bucket policies, ACLs, encryption, Block Public Access |
+| Best For | Backup, archives, media storage, data lakes |
 
-Use Cases: Caches, temporary data, buffers.
+#### S3 Storage Classes
 
-Note: Data is lost when the instance stops or terminates.
+| Storage Class | Best Use Case |
+|----------------|----------------|
+| Standard | Frequently accessed data |
+| Standard-IA | Long-lived but infrequently accessed data |
+| One Zone-IA | Non-critical, infrequent access in 1 AZ |
+| Intelligent-Tiering | Automatically optimizes cost |
+| Glacier Instant Retrieval | Archive with sub-second access |
+| Glacier Flexible Retrieval | Archive with minutes–hours access |
+| Glacier Deep Archive | Lowest-cost long-term archival |
 
-Amazon EBS (Elastic Block Store)
-What it is
+#### S3 Lifecycle Policies
 
-Persistent block storage volumes for EC2.
+| Purpose | Description |
+|---------|-------------|
+| Transition | Move objects between storage classes |
+| Expiration | Delete objects after defined period |
+| Pricing Impact | Reduces cost by optimizing storage tiers |
 
-Benefits
+---
 
-Highly available within an Availability Zone.
+## File Storage Services
 
-Snapshots, encryption, resizing.
+### Amazon EFS
 
-Use Cases
+| Feature | Summary |
+|--------|---------|
+| What it is | Fully managed, elastic NFS file system |
+| Benefits | Scales automatically, multi-AZ |
+| Best For | Shared workloads, lift-and-shift apps |
 
-Databases, boot volumes, critical app data.
+#### EFS Storage Classes
 
-EBS Snapshots
+| Storage Class | Description |
+|----------------|-------------|
+| Standard | Multi-AZ storage |
+| One Zone | Single-AZ, lower cost |
+| IA (Infrequent Access) | Lower cost for infrequent data |
 
-Incremental backups stored in S3.
+#### EFS Lifecycle
 
-Use cases: Backup, migration, DR, versioning.
+| Feature | Description |
+|--------|-------------|
+| Lifecycle Management | Automatically moves files to cost-effective storage |
+| Pricing Impact | Reduces cost for cold data |
 
-Customer Responsibilities: Backup strategies, snapshot lifecycle configs.
+---
 
-Data Lifecycle
+## Amazon FSx
 
-Snapshots → Policies using Amazon Data Lifecycle Manager automate creation, retention, and deletion.
+| Type | Best For |
+|------|----------|
+| FSx for Windows File Server | Windows apps, SMB protocol |
+| FSx for Lustre | HPC workloads |
+| FSx for Ontap | NetApp workloads |
+| FSx for OpenZFS | Linux apps needing ZFS |
 
-Amazon S3 (Simple Storage Service)
-Key Benefits
+---
 
-11 nines of durability.
+## Hybrid Storage
 
-Nearly unlimited scalability.
+### AWS Storage Gateway
 
-Multiple managed storage classes.
+| Gateway Type | Description |
+|--------------|-------------|
+| File Gateway | NFS/SMB interface to S3 |
+| Volume Gateway | Block storage backed by S3 |
+| Tape Gateway | Virtual tapes for backup apps |
 
-Fine-grained security features.
+---
 
-Security Features
+## Disaster Recovery
 
-IAM policies
+### AWS Elastic Disaster Recovery (EDR)
 
-Bucket policies
+| Feature | Summary |
+|--------|---------|
+| Purpose | Replicates on-premises or cloud workloads to AWS |
+| Benefit | Fast recovery and business continuity |
+| Use Case | DR, migration, resilience |
 
-Access Control Lists (ACLs)
+---
 
-S3 Block Public Access
+## Real-World Scenarios
 
-Encryption (SSE-S3, SSE-KMS, SSE-C)
-
-Storage Classes
-
-S3 Standard
-
-S3 Standard-IA
-
-S3 One Zone-IA
-
-S3 Glacier Instant Retrieval
-
-S3 Glacier Flexible Retrieval
-
-S3 Glacier Deep Archive
-
-Intelligent-Tiering
-
-S3 Lifecycle Policies
-
-Automate moving objects to cheaper classes.
-
-Automate expiration and clean-up.
-
-Reduce long-term storage costs.
-
-Hands-On Skills
-
-Navigate the AWS Management Console.
-
-Create and configure an S3 bucket.
-
-Upload files and folders.
-
-Configure system-defined and user-defined metadata.
-
-📁 Amazon EFS (Elastic File System)
-Benefits
-
-Fully managed, elastic, POSIX-compliant file storage.
-
-Scales automatically with workload.
-
-Storage Classes
-
-Standard
-
-Standard-IA
-
-One Zone
-
-One Zone-IA
-
-EFS Lifecycle Policies
-
-Automatic tiering to IA classes based on access frequency.
-
-🏢 Amazon FSx
-
-Managed high-performance file systems for enterprise workloads.
-
-Available File Systems
-
-FSx for Windows File Server
-
-FSx for Lustre
-
-FSx for NetApp ONTAP
-
-FSx for OpenZFS
-
-Use Cases
-
-Windows applications, HPC, machine learning, enterprise migrations.
-
-🏠 AWS Storage Gateway
-
-Hybrid storage service bridging on-prem and cloud.
-
-Gateway Types
-
-File Gateway – NFS/SMB to S3
-
-Volume Gateway – iSCSI block storage with backups to S3
-
-Tape Gateway – Virtual tape library for backups
-
-Use Cases
-
-Hybrid cloud backup
-
-On-prem caching
-
-Migration to cloud storage
-
-Elastic Disaster Recovery (DRS)
-
-Continuous replication for fast failover.
-
-Reduced downtime and data loss.
-
-Use cases: Business continuity, migration, DR automation.
-
-Real-World Scenarios
-
-Companies may use:
-
-S3 for backups, logs, static hosting.
-
-EBS for application storage or databases.
-
-EFS/FSx for shared storage across multiple EC2 instances.
-
-Storage Gateway for hybrid access.
-
-Elastic DR for disaster recovery and failover planning.
+| Scenario | Example AWS Service |
+|----------|---------------------|
+| Backup & archival | S3 + Glacier tiers |
+| Database storage | EBS volumes |
+| Shared storage for applications | EFS |
+| Enterprise file systems | FSx |
+| Hybrid cloud continuity | Storage Gateway |
