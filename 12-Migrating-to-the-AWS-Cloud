@@ -1,0 +1,216 @@
+# Module 12: Migration to the Cloud 
+
+## Overview
+This module covers how organizations migrate workloads, applications, and data to the AWS Cloud. It introduces migration phases, strategies, frameworks, tools, and services used to assess, plan, migrate, and modernize environments.
+
+---
+
+## Learning Objectives
+
+| Objective | Description |
+|---------|-------------|
+| Cloud Migration | Understand what cloud migration is |
+| Migration Phases | Identify phases of large-scale migrations |
+| AWS CAF | Learn the AWS Cloud Adoption Framework |
+| Migration Strategies | Understand the 7 migration strategies |
+| Migration Tools | Identify AWS migration services and use cases |
+| Data Transfer | Learn online and offline data transfer options |
+
+---
+
+## What Is Cloud Migration?
+
+| Topic | Description |
+|-----|-------------|
+| **Cloud Migration** | The process of moving applications, data, and workloads from on-premises or other environments to the cloud |
+
+---
+
+## Three Phases of Migration
+
+| Phase | Description |
+|------|-------------|
+| **Assess** | Evaluate readiness, workloads, and costs |
+| **Mobilize** | Prepare teams, landing zone, and migration plan |
+| **Migrate and Modernize** | Move workloads and improve cloud-native capabilities |
+| **Resource Link** | https://aws.amazon.com/cloud-adoption-framework/ |
+
+---
+
+## AWS Cloud Adoption Framework (CAF)
+
+| Item | Description |
+|----|-------------|
+| **Framework** | AWS Cloud Adoption Framework (CAF) |
+| **Purpose** | Accelerate cloud adoption |
+| **Benefits** | Align technology, people, and processes |
+| **Resource Link** | https://aws.amazon.com/professional-services/CAF/ |
+
+---
+
+## Six Perspectives of the AWS CAF
+
+| Perspective | Focus |
+|-----------|-------|
+| **Business** | Business outcomes and value |
+| **People** | Skills and organizational change |
+| **Governance** | Risk management and compliance |
+| **Platform** | Infrastructure and architecture |
+| **Security** | Identity, protection, and monitoring |
+| **Operations** | Day-to-day cloud operations |
+
+---
+
+## Seven Migration Strategies (7 Rs)
+
+| Strategy | Description |
+|--------|-------------|
+| **Relocate** | Move to cloud without changing architecture |
+| **Rehost** | Lift and shift |
+| **Replatform** | Minor optimizations |
+| **Refactor** | Re-architect for cloud |
+| **Repurchase** | Move to SaaS |
+| **Retain** | Keep on-prem |
+| **Retire** | Decommission applications |
+| **Resource Link** | https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/ |
+
+---
+
+## AWS Migration Tools and Resources
+
+### Migration Evaluator
+
+| Item | Description |
+|----|-------------|
+| **Service** | Migration Evaluator |
+| **Purpose** | Build a data-driven migration business case |
+| **Use Cases** | Cost analysis, readiness planning |
+| **Resource Link** | https://aws.amazon.com/migration-evaluator/ |
+
+---
+
+### AWS Application Discovery Service
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Application Discovery Service |
+| **Purpose** | Discover on-premises servers and dependencies |
+| **Use Cases** | Migration planning |
+| **Resource Link** | https://aws.amazon.com/application-discovery/ |
+
+---
+
+### AWS Application Migration Service
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Application Migration Service |
+| **Purpose** | Migrate applications |
+| **Benefits** | Simplifies and accelerates migrations |
+| **Resource Link** | https://aws.amazon.com/application-migration-service/ |
+
+---
+
+### AWS Migration Hub
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Migration Hub |
+| **Purpose** | Central migration tracking |
+| **Benefits** | Visibility and coordination |
+| **Resource Link** | https://aws.amazon.com/migration-hub/ |
+
+---
+
+## Database Migration Challenges
+
+| Challenge | Description |
+|----------|-------------|
+| Compatibility | Database engine differences |
+| Downtime | Minimizing interruptions |
+| Schema Conversion | Code and structure changes |
+| Data Integrity | Ensuring accuracy and consistency |
+
+---
+
+## AWS Database Migration Service (AWS DMS)
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS DMS |
+| **Purpose** | Migrate databases securely |
+| **Benefits** | Minimal downtime |
+| **Use Cases** | Homogeneous and heterogeneous migrations |
+| **Resource Link** | https://aws.amazon.com/dms/ |
+
+---
+
+## AWS Schema Conversion Tool (AWS SCT)
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS SCT |
+| **Purpose** | Convert database schemas |
+| **Use Cases** | Engine-to-engine migrations |
+| **Resource Link** | https://aws.amazon.com/dms/schema-conversion-tool/ |
+
+---
+
+## Data Transfer Services
+
+### AWS DataSync
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS DataSync |
+| **Purpose** | Online data transfers |
+| **Benefits** | Automated, secure, fast |
+| **Resource Link** | https://aws.amazon.com/datasync/ |
+
+---
+
+### AWS Transfer Family
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Transfer Family |
+| **Purpose** | Managed file transfers |
+| **Protocols** | SFTP, FTPS, FTP |
+| **Resource Link** | https://aws.amazon.com/aws-transfer-family/ |
+
+---
+
+### AWS Direct Connect
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Direct Connect |
+| **Purpose** | Private network connection |
+| **Use Cases** | Hybrid cloud |
+| **Resource Link** | https://aws.amazon.com/directconnect/ |
+
+---
+
+## Offline Data Transfer: AWS Snow Family
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Snowball Edge |
+| **Purpose** | Offline data migration |
+| **Benefits** | High-capacity, secure |
+| **Use Cases** | Limited or no network connectivity |
+| **Resource Link** | https://aws.amazon.com/snow/ |
+
+---
+
+## Migration Partners
+
+| Topic | Description |
+|-----|-------------|
+| **AWS Migration & Modernization Partners** | Certified partners to help migrate and modernize workloads |
+
+---
+
+## Summary
+In Module 12, you learned how organizations migrate to the AWS Cloud using structured frameworks, strategies, and tools. AWS provides services to assess readiness, plan migrations, transfer data, migrate applications and databases, and modernize environments efficiently and securely.
+
