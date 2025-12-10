@@ -1,0 +1,210 @@
+# Module 10: Monitoring, Compliance, and Governance in the AWS Cloud 
+
+## Overview
+This module explains how AWS helps you **monitor resources**, **audit activity**, and **govern environments at scale**.  
+You learn how monitoring, compliance, and governance build on one another to create secure, compliant, and well-managed cloud environments.
+
+---
+
+## Learning Objectives
+
+| Objective | Description |
+|---------|-------------|
+| Monitoring Progression | Understand how monitoring leads into governance and compliance |
+| Cloud Monitoring | Define monitoring in the AWS Cloud |
+| Auditing | Understand why auditing activity is critical |
+| Compliance | Define compliance and AWS compliance benefits |
+| Governance | Learn how AWS services help manage and govern multi-account environments |
+
+---
+
+## Monitoring in the AWS Cloud
+
+| Topic | Description |
+|------|-------------|
+| **Monitoring** | Observing systems, applications, and resources to track performance and health |
+| **Purpose** | Detect issues, optimize performance, and ensure reliability |
+| **Benefits** | Improves visibility, availability, and operational awareness |
+
+---
+
+## Amazon CloudWatch
+
+| Item | Description |
+|----|-------------|
+| **Service** | Amazon CloudWatch |
+| **Purpose** | Real-time monitoring of AWS resources and applications |
+| **Benefits** | Visibility into metrics, logs, and alarms |
+| **Use Cases** | Performance monitoring, alerting, troubleshooting |
+| **Resource Link** | https://aws.amazon.com/cloudwatch/ |
+
+---
+
+## Auditing in AWS
+
+| Topic | Description |
+|------|-------------|
+| **Auditing** | Tracking actions taken in an AWS environment |
+| **Importance** | Supports security investigations, compliance, and accountability |
+| **Key Question Answered** | Who did what, where, and when |
+
+---
+
+## AWS CloudTrail
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS CloudTrail |
+| **Purpose** | Records account activity and API calls |
+| **Benefits** | Security monitoring, auditing, troubleshooting |
+| **Events** | Logs user actions and service activity |
+| **Insights** | Detects unusual or anomalous API activity |
+| **Resource Link** | https://aws.amazon.com/cloudtrail/ |
+
+---
+
+## CloudTrail Events and Logs
+
+| Component | Description |
+|---------|-------------|
+| **Events** | Records of API calls and user activity |
+| **Logs** | Stored event data for review and investigation |
+| **Insights** | Automated detection of abnormal behavior |
+
+---
+
+## Compliance in AWS
+
+| Topic | Description |
+|------|-------------|
+| **Compliance** | Meeting regulatory and industry requirements |
+| **AWS Role** | Provides compliant infrastructure and documentation |
+| **Customer Role** | Ensure configurations and usage meet requirements |
+| **Benefits** | Reduces risk, supports audits, improves trust |
+
+---
+
+## AWS Artifact
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Artifact |
+| **Purpose** | Access AWS compliance and security documentation |
+| **Types** | Reports & Agreements |
+| **Benefits** | On-demand audit artifacts |
+| **Resource Link** | https://aws.amazon.com/artifact/ |
+
+---
+
+## AWS Config
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Config |
+| **Purpose** | Track and evaluate resource configurations |
+| **Benefits** | Configuration compliance and auditing |
+| **Use Cases** | Drift detection, compliance reporting |
+| **Resource Link** | https://aws.amazon.com/config/ |
+
+---
+
+## AWS Audit Manager
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Audit Manager |
+| **Purpose** | Automates evidence collection for audits |
+| **Benefits** | Reduces manual audit effort |
+| **Use Cases** | Risk and compliance assessments |
+| **Resource Link** | https://aws.amazon.com/audit-manager/ |
+
+---
+
+## AWS Organizations
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Organizations |
+| **Purpose** | Central management of multiple AWS accounts |
+| **Benefits** | Policy enforcement, account automation |
+| **Key Concepts** | Accounts, organizational units (OUs), SCPs |
+| **Resource Link** | https://aws.amazon.com/organizations/ |
+
+---
+
+## AWS Control Tower
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Control Tower |
+| **Purpose** | Governance at scale for multi-account environments |
+| **Benefits** | Enforces security and compliance rules |
+| **Use Cases** | Enterprise landing zones |
+| **Resource Link** | https://aws.amazon.com/controltower/ |
+
+---
+
+## AWS Service Catalog
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Service Catalog |
+| **Purpose** | Curated AWS resource catalogs |
+| **Benefits** | Consistent deployments, governance |
+| **Use Cases** | Standardized account provisioning |
+| **Resource Link** | https://aws.amazon.com/servicecatalog/ |
+
+---
+
+## AWS License Manager
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS License Manager |
+| **Purpose** | Manage and track software licenses |
+| **Benefits** | Cost optimization, compliance |
+| **Use Cases** | BYOL license tracking |
+| **Resource Link** | https://aws.amazon.com/license-manager/ |
+
+---
+
+## AWS Health
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Health |
+| **Purpose** | Provides visibility into AWS service events |
+| **Benefits** | Proactive notifications |
+| **Use Cases** | Operational awareness |
+| **Resource Link** | https://aws.amazon.com/premiumsupport/technology/aws-health/ |
+
+---
+
+## AWS Trusted Advisor
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Trusted Advisor |
+| **Purpose** | Best-practice recommendations |
+| **Categories** | Cost, performance, security, fault tolerance |
+| **Benefits** | Continuous optimization |
+| **Resource Link** | https://aws.amazon.com/trustedadvisor/ |
+
+---
+
+## IAM Access Analyzer
+
+| Item | Description |
+|----|-------------|
+| **Service** | IAM Access Analyzer |
+| **Purpose** | Identify overly permissive access |
+| **Benefits** | Enforces least privilege |
+| **Use Cases** | Security audits |
+| **Resource Link** | https://aws.amazon.com/iam/features/analyze-access/ |
+
+---
+
+## Summary
+In Module 10, you learned how AWS supports monitoring, compliance, and governance throughout the cloud lifecycle.  
+You explored services that provide observability, auditing, compliance reporting, and enterprise-scale governance, helping ensure secure, compliant, and well-managed AWS environments.
+
