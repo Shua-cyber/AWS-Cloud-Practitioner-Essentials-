@@ -1,0 +1,208 @@
+# Module 11: Pricing and Support 
+
+## Overview
+This module explains how AWS pricing works, what drives cloud costs, and how AWS helps customers **manage spending**, **optimize usage**, and **get support**.  
+You also learn about cost optimization techniques, AWS Marketplace, and the AWS Partner ecosystem.
+
+---
+
+## Learning Objectives
+
+| Objective | Description |
+|---------|-------------|
+| AWS Pricing Models | Understand how AWS services are priced |
+| Cost Drivers | Identify factors that impact AWS costs |
+| Cost Management | Learn tools for tracking and controlling spend |
+| Support Plans | Compare AWS Support plans |
+| Marketplace & Partners | Understand AWS Marketplace and the AWS Partner Network |
+| Cost Optimization | Learn techniques to reduce cloud spending |
+
+---
+
+## Key Concepts of AWS Pricing
+
+| Concept | Description |
+|------|-------------|
+| **Pay-as-you-go** | Pay only for what you use |
+| **Scale benefits** | Lower costs as usage increases |
+| **Elasticity** | Scale up and down to avoid overprovisioning |
+| **Free Tier** | Limited free usage for new customers |
+
+---
+
+## Driving Factors of AWS Costs
+
+| Cost Driver | Description |
+|-----------|-------------|
+| **Compute** | Instance type, size, and runtime |
+| **Storage** | Amount stored, storage class |
+| **Data Transfer** | Data moving out of AWS |
+| **Requests** | API calls and service usage |
+| **Region** | Pricing varies by AWS region |
+
+---
+
+## Amazon S3 Pricing
+
+| Item | Description |
+|----|-------------|
+| **Service** | Amazon S3 |
+| **Pricing Factors** | Storage used, requests, data transfer |
+| **Free Tier** | Limited storage and requests |
+| **Use Cases** | Data lakes, backups, static websites |
+| **Resource Link** | https://aws.amazon.com/s3/pricing/ |
+
+---
+
+## Amazon EC2 On-Demand Pricing
+
+| Item | Description |
+|----|-------------|
+| **Service** | Amazon EC2 |
+| **Pricing Model** | Pay per second/hour with no commitment |
+| **Pricing Factors** | Instance type, region, OS |
+| **Use Cases** | Flexible workloads |
+| **Resource Link** | https://aws.amazon.com/ec2/pricing/on-demand/ |
+
+---
+
+## AWS Organizations
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Organizations |
+| **Purpose** | Centralized account management |
+| **Billing Benefit** | Consolidated billing |
+| **Use Cases** | Multi-account environments |
+| **Resource Link** | https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html |
+
+---
+
+## AWS Billing Console
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Billing Console |
+| **Purpose** | View and manage AWS charges |
+| **Benefits** | Invoice access, credits, discounts |
+| **Use Cases** | Cost tracking and reporting |
+| **Resource Link** | https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html |
+
+---
+
+## AWS Budgets
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Budgets |
+| **Purpose** | Set spending and usage limits |
+| **Benefits** | Alerts and automated actions |
+| **Use Cases** | Prevent overspending |
+| **Resource Link** | https://aws.amazon.com/aws-cost-management/aws-budgets/ |
+
+---
+
+## AWS Cost Explorer
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Cost Explorer |
+| **Purpose** | Visualize and analyze costs |
+| **Benefits** | Forecasting and reports |
+| **Use Cases** | Cost optimization |
+| **Resource Link** | https://aws.amazon.com/aws-cost-management/aws-cost-explorer/ |
+
+---
+
+## AWS Pricing Calculator
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Pricing Calculator |
+| **Purpose** | Estimate AWS costs |
+| **Benefits** | Budget planning |
+| **Use Cases** | Architecture design |
+| **Resource Link** | https://calculator.aws/#/ |
+
+---
+
+## AWS Support Plans
+
+| Plan | Key Features |
+|----|-------------|
+| **Basic** | Free documentation and forums |
+| **Developer** | Business hours support |
+| **Business** | 24/7 support, faster response |
+| **Enterprise** | Dedicated technical account manager |
+
+---
+
+## Additional AWS Support Options
+
+| Support Option | Description |
+|---------------|-------------|
+| **AWS re:Post** | Community-driven Q&A platform |
+| **AWS Trust & Safety Center** | Abuse reporting and guidance |
+| **AWS Professional Services** | Hands-on expert assistance |
+| **AWS Documentation** | Official technical resources |
+
+---
+
+## Self-Support Resources
+
+| Resource | Description |
+|--------|-------------|
+| **AWS Documentation** | Guides, tutorials, APIs |
+| **Whitepapers** | Best practices |
+| **Knowledge Center** | Troubleshooting articles |
+
+---
+
+## AWS Marketplace
+
+| Item | Description |
+|----|-------------|
+| **Service** | AWS Marketplace |
+| **Purpose** | Discover third-party software |
+| **Pricing Options** | Hourly, monthly, annual |
+| **Benefits** | Simplified procurement |
+| **Resource Link** | https://aws.amazon.com/marketplace/ |
+
+---
+
+## AWS Partner Network (APN)
+
+| Topic | Description |
+|------|-------------|
+| **Role** | Help customers adopt AWS |
+| **Benefits** | Specialized expertise |
+| **Partners** | Consulting, technology partners |
+
+---
+
+## AWS Partner Benefits
+
+| Benefit | Description |
+|--------|-------------|
+| **Funding** | Credits and discounts |
+| **Training** | AWS certifications and courses |
+| **Events** | Webinars and workshops |
+
+---
+
+## Cost Optimization Techniques
+
+| Technique | Description |
+|---------|-------------|
+| **Right-sizing** | Match resource size to workload |
+| **Reserved Instances** | Lower cost for long-term use |
+| **Savings Plans** | Flexible cost savings |
+| **Monitoring** | Track unused resources |
+| **Automation** | Shut down idle services |
+
+---
+
+## Summary
+In Module 11, you learned how AWS pricing works, how to manage costs, and how AWS supports customers through tools, documentation, partners, and support plans.  
+These services help ensure efficient spending, operational awareness, and access to expert guidance throughout your AWS journey.
+
